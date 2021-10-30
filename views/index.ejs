@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <a href = "/login"><button type ="button" class="adminLog" name ="button">Admin Login</button></a>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Roulette</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <input type="number" placeholder="message" name="msg" class="betAmount">
+    <input type="number" placeholder="Bet A Value" name="msg" class="betAmount">
   <input type="hidden" value="" placeholder="BetValue" name="bet" class="betValue">
+  <input class ="red" type="button" value="red" class="betChoice">
+  <input class = "black" type="button" value="black" class="betChoice">
+  <input class ="green" type="button" value="green" class="betChoice">
   <button type="submit" class="submitBtn">Submit</button>
-  <input type="button" value="red" class="betChoice">
-  <input type="button" value="black" class="betChoice">
-  <input type="button" value="green" class="betChoice">
   <h2 id="result"></h2>
-  <a href = "/login"><button type ="button" name ="button">Login</button></a>
+
+
+  <img src="img/roulette.gif" alt="description of gif" /> 
     <script src="main.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+var ObjectId = require('mongodb').ObjectID;
 module.exports = function(app, passport, db) {
 
 // normal routes ===============================================================
@@ -22,6 +24,7 @@ module.exports = function(app, passport, db) {
     app.put('/upVote', (req, res) => {
         db.collection('messages')
         .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
+          
           $set: {
            thumbUp:req.body.thumbUp + 1
           }
@@ -66,6 +69,8 @@ module.exports = function(app, passport, db) {
            value:req.body.amount * -35,
            loss:1,
            moneyLoss:req.body.amount * -35,
+          
+        
 
          }
         }, {
@@ -89,6 +94,8 @@ module.exports = function(app, passport, db) {
            value:req.body.amount * -2,
            loss:1,
            moneyLoss:req.body.amount * -2,
+          
+       
 
          }
         }, {
@@ -114,6 +121,7 @@ module.exports = function(app, passport, db) {
              value:req.body.amount, 
              wins:1,
              moneyWon:req.body.amount,
+            
   
            }
           }, {
